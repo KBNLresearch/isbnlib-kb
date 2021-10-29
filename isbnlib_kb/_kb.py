@@ -62,9 +62,6 @@ def _clean_author(author):
 def parser_kb(xml):
     """Parse the response from the KB (National Library of the Netherlands) service (NL)."""
     # handle special case
-    if "database denied" in xml:
-        LOGGER.debug("LoC is denying access! Try later.")
-        return {}
     if "numberOfRecords>0<" in xml:
         return {}
     # parse xml and extract canonical fields (Dublin Core)
