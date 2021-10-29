@@ -60,7 +60,7 @@ def _clean_author(author):
 
 
 def parser_kb(xml):
-    """Parse the response from the LoC (Library of Congress) service (US)."""
+    """Parse the response from the KB (National Library of the Netherlands) service (NL)."""
     # handle special case
     if "database denied" in xml:
         LOGGER.debug("LoC is denying access! Try later.")
